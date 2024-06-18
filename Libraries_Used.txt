@@ -1,0 +1,43 @@
+# 1) scraping file
+import os
+import re
+import googleapiclient.discovery
+from googleapiclient.errors import HttpError
+
+# 2) sentiments file
+import pandas as pd
+import numpy as np
+import re
+import nltk
+import pickle
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+# 3) processing and model training file(main)
+import nltk
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+from nltk.stem.porter import PorterStemmer
+import re
+port_stem=PorterStemmer()
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+import pickle
+from sklearn import metrics
+
+# 4) deployment file
+import pandas as pd
+import streamlit as st
+import re
+import nltk
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import pickle
+import time
